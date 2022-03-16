@@ -24,5 +24,6 @@
         memo.put(index, oneJump+twoJumps);
         
         return oneJump+twoJumps;
+          //return memo.get(currentKey);
         
     }
