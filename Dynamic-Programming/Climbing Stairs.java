@@ -1,6 +1,6 @@
-           Climbing Stairs 
+           LC70 . Climbing Stairs 
            
-    /* you are given with the nth steps which wwanted to be climbed with two possibilites of either one jump or two jumps */
+    // you are given with the nth steps which wwanted to be climbed with two possibilites of either one jump or two jumps 
     
     
     public int climbStairs(int n) {
