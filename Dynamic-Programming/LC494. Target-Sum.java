@@ -24,6 +24,5 @@ class Solution {
         
         return map.get(key);
         
-    
     }
 }
