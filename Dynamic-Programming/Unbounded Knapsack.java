@@ -1,4 +1,4 @@
-public static int maxProfit(int capacity, int[] weight, int[] profit, int currIndex, int n, HashMap<String, Integer> map) {
+public static int unboundKnap(int capacity, int[] weight, int[] profit, int currIndex, int n, HashMap<String, Integer> map) {
        //if capcity is zero at any point, return 0
           if(capacity == 0) 
            return 0;
@@ -21,10 +21,10 @@ public static int maxProfit(int capacity, int[] weight, int[] profit, int currIn
         //check if weight of current index is less than or equal to capacity only then check for pickItem
         if (currItemWeight <= capacity)
             //pickItem = profit + function call of the same current Index - unbounded Knapsack(includes duplicates)
-            pickItem = currItemProfit + maxProfit(capacity - currItemWeight, weight, profit, currIndex, n, map);
+            pickItem = currItemProfit + unboundKnap(capacity - currItemWeight, weight, profit, currIndex, n, map);
         
         //dont pick, move to next index
-        int nonPickItem = maxProfit(capacity, weight, profit, currIndex + 1, n, map);
+        int nonPickItem = unboundKnap(capacity, weight, profit, currIndex + 1, n, map);
         
         //check for max and update in map
         map.put(key, Math.max(pickItem, nonPickItem));
