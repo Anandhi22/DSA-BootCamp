@@ -16,7 +16,7 @@ class Solution {
         if (amount == 0)
             return 0;
         //base condition when array bounds out of length
-        if (currIndex >= coins.length) return Integer.MAX_VALUE;
+        if (currIndex >= coins.length) return 10000;
 
         //declare the key for 2D Dynamic Programming
         String key = currIndex + "-" + amount;
