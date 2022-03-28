@@ -19,7 +19,7 @@ class Solution
     public int minFallingPath(int[][] matrix, int currRow, int currCol, int row, int col, HashMap<String, Integer> memo)
     {
         
-        if(currRow>=row || currRow<=-1 || currCol<=-1 || currCol>=col) return 10001;
+        if(currCol<=-1 || currCol>=col) return 10001;
         
         if(currRow == row-1) return matrix[currRow][currCol];
         
