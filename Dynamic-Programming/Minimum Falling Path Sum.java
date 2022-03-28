@@ -4,10 +4,12 @@ class Solution
   public int minFallingPathSum(int[][] matrix) {
         
         int result, minimum = 100001;
+     
+     HashMap<String, Integer> memo = new HashMap<>();
         
          for( int i = 0;i<matrix[0].length;i++){
          
-              result =  minFallingPath(matrix, 0, i, matrix.length, matrix[0].length, new HashMap<>());
+              result =  minFallingPath(matrix, 0, i, matrix.length, matrix[0].length,memo);
               minimum = Math.min(minimum,result);
          }
         return minimum;
