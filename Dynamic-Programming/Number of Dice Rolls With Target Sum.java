@@ -1,3 +1,7 @@
+// Time Complexity = o(n * target * k)
+// Space Complexity = o(n *target)
+
+
 class Solution {
     public int numRollsToTarget(int n, int k, int target) {
         
