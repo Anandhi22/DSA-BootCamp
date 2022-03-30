@@ -1,5 +1,5 @@
 // Time Complexity = O(m*n)
-//Space Complexity = O(min(length of s1, length of s2))
+//Space Complexity = O(m*n)
 
 class Solution {
     public int longestCommonSubsequence(String text1, String text2) {
