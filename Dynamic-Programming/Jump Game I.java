@@ -1,6 +1,8 @@
 class Solution {
     public boolean canJump(int[] nums) {
         
+        if(nums.length==0 || nums.length==1) return true;
+        
         return findCanJump(nums, 0, new HashMap<>());
         
     }
