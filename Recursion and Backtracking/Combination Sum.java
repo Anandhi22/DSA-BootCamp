@@ -10,12 +10,12 @@ class Solution {
         
     }
     
-    public void combine(int ind, int target,int[] arr,ArrayList<Integer> ds, ArrayList<List<Integer>> ans)
+    public void combine(int ind, int target,int[] arr,ArrayList<Integer> currentSubset, ArrayList<List<Integer>> ans)
     {
         
         if(target == 0) 
             {
-              ans.add(new ArrayList<>(ds));
+              ans.add(new ArrayList<>(currentSubset));
                 return;
             }
             
@@ -26,16 +26,16 @@ class Solution {
         if(arr[ind] <= target) 
         {
         
-        ds.add(arr[ind]);
+        currentSubset.add(arr[ind]);
         
         // since n times, the same index can be used.
         // unbounded KnapSack
-        combine(ind, target- arr[ind],  arr, ds, ans);
+        combine(ind, target- arr[ind], arr, currentSubset, ans);
         
-        ds.remove(ds.size()-1);
+        currentSubset.remove(currentSubset.size()-1);
         }
         
-        combine(ind+1, target,arr,ds, ans);
+        combine(ind+1, target,arr,currentSubset, ans);
         
     }
 }
