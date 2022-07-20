@@ -1,7 +1,7 @@
 class Solution {
     public ListNode swapNodes(ListNode head, int k) {
         
-        if( head == null && head.next == null)
+        if( head == null || head.next == null || k == 0)
             return head;
         
         ListNode dummyNode = new ListNode(-1);
