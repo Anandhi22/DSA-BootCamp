@@ -14,6 +14,6 @@ class Solution {
         for(Node currentChild : root.children)
             ans = Math.max(ans, height(currentChild));
         
-        //adding 1 at the end of each node call, since for loop will not run for null child of any node
+         //since, the for loop doesnt run for no children case, adding 1 in return.
         return 1 + ans;
     }
